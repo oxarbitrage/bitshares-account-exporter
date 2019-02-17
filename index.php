@@ -49,9 +49,8 @@ if(isset($_POST['download'])) {
 		
 		$line = array(
 					$j->account_history->account, $j->account_history->id, $j->account_history->next, $j->account_history->operation_id, $j->account_history->sequence, 
-					$j->additional_data->fee_data->amount, $j->additional_data->fee_data->asset, $j->additional_data->transfer_data->amount, $j->additional_data->transfer_data->asset,
 					$j->block_data->block_num, $j->block_data->block_time, $j->block_data->trx_id, 
-					$j->operation_history->op, $j->operation_history->op_in_trx, $j->operation_history->operation_result, $j->operation_history->trx_in_block, $j->operation_history->virtual_op,
+					json_encode($j->operation_history->op_object), $j->operation_history->op_in_trx, $j->operation_history->operation_result, $j->operation_history->trx_in_block, $j->operation_history->virtual_op,
 					$j->operation_type
 					);
 		
