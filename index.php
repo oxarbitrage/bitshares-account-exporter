@@ -38,7 +38,6 @@ if(isset($_POST['download'])) {
 	
 	$header = array(
 				"Account History - Account", "Account History - ID", "Account History - Next", "Account History - Operation ID", "Account History - Sequence",
-				"Additional Data - Fee Data - Amount", "Additional Data - Fee Data -Asset", "Additional Data - Transfer Data - Amount", "Additional Data - Transfer Data - Asset",
 				"Block Data - Block Number", "Block Data - Block Time", "Block Data - Transaction ID",
 				"Operation History - Raw Operation", "Operation History - Operation in Transaction", "Operation History - Operation Result", "Operation History - Transaction in Block", "Operation Data - Virtual Operation",
 				"Operation Type"
@@ -49,9 +48,8 @@ if(isset($_POST['download'])) {
 		
 		$line = array(
 					$j->account_history->account, $j->account_history->id, $j->account_history->next, $j->account_history->operation_id, $j->account_history->sequence, 
-					$j->additional_data->fee_data->amount, $j->additional_data->fee_data->asset, $j->additional_data->transfer_data->amount, $j->additional_data->transfer_data->asset,
 					$j->block_data->block_num, $j->block_data->block_time, $j->block_data->trx_id, 
-					$j->operation_history->op, $j->operation_history->op_in_trx, $j->operation_history->operation_result, $j->operation_history->trx_in_block, $j->operation_history->virtual_op,
+					json_encode($j->operation_history->op_object), $j->operation_history->op_in_trx, $j->operation_history->operation_result, $j->operation_history->trx_in_block, $j->operation_history->virtual_op,
 					$j->operation_type
 					);
 		
