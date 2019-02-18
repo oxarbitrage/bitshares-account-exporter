@@ -38,7 +38,6 @@ if(isset($_POST['download'])) {
 	
 	$header = array(
 				"Account History - Account", "Account History - ID", "Account History - Next", "Account History - Operation ID", "Account History - Sequence",
-				"Additional Data - Fee Data - Amount", "Additional Data - Fee Data -Asset", "Additional Data - Transfer Data - Amount", "Additional Data - Transfer Data - Asset",
 				"Block Data - Block Number", "Block Data - Block Time", "Block Data - Transaction ID",
 				"Operation History - Raw Operation", "Operation History - Operation in Transaction", "Operation History - Operation Result", "Operation History - Transaction in Block", "Operation Data - Virtual Operation",
 				"Operation Type"
